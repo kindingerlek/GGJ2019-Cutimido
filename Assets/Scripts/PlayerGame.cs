@@ -9,6 +9,7 @@ public class PlayerGame : MonoBehaviour {
 
     public int gamePlayerId = 0;
 
+    public float turnSpeed = 3;
     public float speed = 10.0f;
     public float gravity = 10.0f;
     public float maxVelocityChange = 10.0f;
@@ -20,6 +21,8 @@ public class PlayerGame : MonoBehaviour {
     private bool grounded = false;
 
     private Vector3 moveVector;
+
+    private Vector3 lastMoveVector = Vector3.forward;
 
     private new Rigidbody rigidbody;
     private Rewired.Player player { get { return PressStartToJoinExample_Assigner.GetRewiredPlayer(gamePlayerId); } }
@@ -35,6 +38,9 @@ public class PlayerGame : MonoBehaviour {
 
     private void GetInput()
     {
+        if (moveVector.magnitude > 0)
+            lastMoveVector = moveVector;
+
         // Get the input from the Rewired Player. All controllers that the Player owns will contribute, so it doesn't matter
         // whether the input is coming from a joystick, the keyboard, mouse, or a custom controller.
 
@@ -57,7 +63,8 @@ public class PlayerGame : MonoBehaviour {
         if (grounded)
         {
             // Calculate how fast we should be moving
-            Vector3 targetVelocity = new Vector3(moveVector.x, 0, moveVector.y);
+            Vector3 targetVelocity = new Vector3(lastMoveVector.x, 0, lastMoveVector.y).normalized;
+            Debug.Log(targetVelocity);
             targetVelocity = transform.TransformDirection(targetVelocity);
             targetVelocity *= speed;
 
@@ -68,6 +75,7 @@ public class PlayerGame : MonoBehaviour {
             velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
             velocityChange.y = 0;
             rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
+
 
             // Jump
             if (canJump && jump)
@@ -80,6 +88,8 @@ public class PlayerGame : MonoBehaviour {
 
         // We apply gravity manually for more tuning control
         rigidbody.AddForce(new Vector3(0, -gravity * rigidbody.mass, 0));
+
+
 
         grounded = false;
     }
