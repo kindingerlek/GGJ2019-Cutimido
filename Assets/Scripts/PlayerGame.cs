@@ -27,6 +27,11 @@ public class PlayerGame : MonoBehaviour {
     private Vector3 lastMoveVector = Vector3.zero;
 
     private new Rigidbody rigidbody;
+
+    private float remainSlowTime;
+    private float slowSpeed;
+    private float slowVelocityChange;
+
     public Rewired.Player player { get { return PressStartToJoinExample_Assigner.GetRewiredPlayer(gamePlayerId); } }
 
   
@@ -63,6 +68,13 @@ public class PlayerGame : MonoBehaviour {
         if (player == null) return;
 
         GetInput();
+
+        if((remainSlowTime -= Time.deltaTime) > 0)
+        {
+            speed = slowSpeed;
+            maxVelocityChange = slowVelocityChange;
+
+        }
     }
 
     void FixedUpdate()
@@ -108,6 +120,16 @@ public class PlayerGame : MonoBehaviour {
 
         grounded = false;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!collision.transform.tag.Equals("Obstacle"))
+            return;
+
+        remainSlowTime = 2f;
+        
+    }
+
 
     void OnCollisionStay()
     {
