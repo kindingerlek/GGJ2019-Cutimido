@@ -14,6 +14,7 @@ public class PlayerGame : MonoBehaviour {
     public float gravity = 10.0f;
     public float maxVelocityChange = 10.0f;
     public float jumpHeight = 2.0f;
+    public float currentRotationSpeed = 3;
     public bool canJump = true;
 
     private bool fire;
@@ -21,8 +22,9 @@ public class PlayerGame : MonoBehaviour {
     private bool grounded = false;
 
     private Vector3 moveVector;
+    private Vector3 lookDirection;
 
-    private Vector3 lastMoveVector = Vector3.forward;
+    private Vector3 lastMoveVector = Vector3.zero;
 
     private new Rigidbody rigidbody;
     private Rewired.Player player { get { return PressStartToJoinExample_Assigner.GetRewiredPlayer(gamePlayerId); } }
@@ -39,13 +41,17 @@ public class PlayerGame : MonoBehaviour {
     private void GetInput()
     {
         if (moveVector.magnitude > 0)
+        {
             lastMoveVector = moveVector;
+            lookDirection.x = lastMoveVector.normalized.x;
+            lookDirection.z = lastMoveVector.normalized.z;
+        }
 
         // Get the input from the Rewired Player. All controllers that the Player owns will contribute, so it doesn't matter
         // whether the input is coming from a joystick, the keyboard, mouse, or a custom controller.
 
         moveVector.x = player.GetAxis("Move Horizontal"); // get input by name or action id
-        moveVector.y = player.GetAxis("Move Vertical");
+        moveVector.z = player.GetAxis("Move Vertical");
         fire = player.GetButtonDown("Fire");
         jump = player.GetButtonDown("Jump");
     }
@@ -60,11 +66,12 @@ public class PlayerGame : MonoBehaviour {
 
     void FixedUpdate()
     {
+        
         if (grounded)
         {
             // Calculate how fast we should be moving
-            Vector3 targetVelocity = new Vector3(lastMoveVector.x, 0, lastMoveVector.y).normalized;
-            Debug.Log(targetVelocity);
+
+            Vector3 targetVelocity = Vector3.forward;
             targetVelocity = transform.TransformDirection(targetVelocity);
             targetVelocity *= speed;
 
@@ -83,13 +90,20 @@ public class PlayerGame : MonoBehaviour {
                 rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
             }
         }
+        
+        //lookDirection = rigidbody.velocity.normalized;
+        
+        if (lookDirection != Vector3.zero && currentRotationSpeed > 0f)
+        {
+            // Smoothly interpolate from current to target look direction
+            Vector3 smoothedLookDirection = Vector3.Slerp(transform.forward, lookDirection, 1 - Mathf.Exp(-currentRotationSpeed * Time.deltaTime)).normalized;
 
-
+            // Set the current rotation (which will be used by the KinematicCharacterMotor)
+            transform.rotation = Quaternion.LookRotation(smoothedLookDirection, transform.up);
+        }
 
         // We apply gravity manually for more tuning control
         rigidbody.AddForce(new Vector3(0, -gravity * rigidbody.mass, 0));
-
-
 
         grounded = false;
     }
