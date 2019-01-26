@@ -33,8 +33,12 @@ public class CameraControl : MonoBehaviour
         // Fraction of journey completed = current distance divided by total distance.
         float fracJourney = distCovered / journeyLength;
 
-        print(fracJourney);
+       // print(fracJourney);
 
         this.transform.position = Vector3.Lerp(this.transform.position, new Vector3(objectToFollow.position.x + offset.x,transform.position.y,objectToFollow.position.z + offset.z) , speed * Time.deltaTime);
+    }
+
+    public void SetObjectToFollow(Transform obj) {
+        objectToFollow = obj;
     }
 }

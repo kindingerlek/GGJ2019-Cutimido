@@ -27,12 +27,14 @@ public class PlayerGame : MonoBehaviour {
     private Vector3 lastMoveVector = Vector3.zero;
 
     private new Rigidbody rigidbody;
+
     private float remainSlowTime;
     private float slowSpeed;
     private float slowVelocityChange;
 
-    private Rewired.Player player { get { return PressStartToJoinExample_Assigner.GetRewiredPlayer(gamePlayerId); } }
+    public Rewired.Player player { get { return PressStartToJoinExample_Assigner.GetRewiredPlayer(gamePlayerId); } }
 
+  
 
     void Awake()
     {
