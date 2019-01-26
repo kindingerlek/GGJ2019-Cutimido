@@ -27,8 +27,9 @@ public class PlayerGame : MonoBehaviour {
     private Vector3 lastMoveVector = Vector3.zero;
 
     private new Rigidbody rigidbody;
-    private Rewired.Player player { get { return PressStartToJoinExample_Assigner.GetRewiredPlayer(gamePlayerId); } }
+    public Rewired.Player player { get { return PressStartToJoinExample_Assigner.GetRewiredPlayer(gamePlayerId); } }
 
+  
 
     void Awake()
     {
