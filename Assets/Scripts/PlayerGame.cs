@@ -33,7 +33,7 @@ public class PlayerGame : MonoBehaviour {
     private Vector3 lookDirection;
 
     private Vector3 lastMoveVector = Vector3.zero;
-
+    private Animator animator;
     private new Rigidbody rigidbody;
 
     [HideInInspector]
@@ -52,6 +52,8 @@ public class PlayerGame : MonoBehaviour {
 
         currentSpeed = speed;
         currentVelocityChange = maxVelocityChange;
+
+        animator = this.GetComponentInChildren<Animator>();
     }
 
     private void GetInput()
@@ -159,6 +161,8 @@ public class PlayerGame : MonoBehaviour {
             return;
 
         remainSlowTime = 5f;
+
+        animator.SetTrigger("hit");
         
     }
 
