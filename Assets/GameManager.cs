@@ -11,8 +11,12 @@ public class GameManager : MonoBehaviour
     
     public GameState state = GameState.pre;
 
+    public GameObject objective;
+
     void Awake()
     {
+
+
         //Check if instance already exists
         if (instance == null)
 
@@ -33,6 +37,15 @@ public class GameManager : MonoBehaviour
 
     void InitGame() {
         state = GameState.waitingforplayers;
+
+
+        GameObject[] objectivePoints = GameObject.FindGameObjectsWithTag("SpawnPointObjective");
+
+        var i = Mathf.FloorToInt(Random.Range(0, objectivePoints.Length));
+
+        objective.transform.position = objectivePoints[i].transform.position;
+        objective.transform.rotation = objectivePoints[i].transform.rotation;
+
         //Call Intro
         //Call Timer
         //Call init

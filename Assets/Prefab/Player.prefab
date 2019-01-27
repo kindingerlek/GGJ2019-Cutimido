@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 8717820855898982062}
   - component: {fileID: 2551344955447672591}
   - component: {fileID: 1704567920419755452}
+  - component: {fileID: 6850352439227745164}
+  - component: {fileID: 5338321899647999993}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -187,6 +189,54 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6850352439227745164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2551344955447672581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac76d34ad1500748b1340257449a64d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultIndicatorPanel: {fileID: 159380, guid: 16c9f8d5c99f8fc4c8b185deca3116e4,
+    type: 3}
+  ViewerCamera: {fileID: 0}
+  ViewerObject: {fileID: 0}
+  CanvasSortingOrder: -100
+  UpdateInterval: 0.015
+  IndicatorEdgeDistance: 0.9
+  TargetEdgeDistance: 0.95
+  DisableOnDistance: 1
+  DisableDistance: 100
+  OffScreenRotates: 1
+  AutoScale: 1
+  ScalingFactor: 10
+  MinScaleSize: 0.2
+  MaxScaleSize: 100
+  TransitionDuration: 0.25
+  OnScreenEnableTransition: 5
+  OnScreenDisableTransition: 5
+  OffScreenEnableTransition: 5
+  OffScreenDisableTransition: 5
+--- !u!114 &5338321899647999993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2551344955447672581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250b46ae70bf97643ac805766a69a34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Color: {r: 1, g: 0, b: 0, a: 1}
+  RandomColor: 0
+  ChangeGameobjectColor: 0
+  ChangeChildrenColor: 0
 --- !u!1001 &5293206411902684067
 PrefabInstance:
   m_ObjectHideFlags: 0
