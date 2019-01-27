@@ -11,22 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreditsProgrammer.unity
     guid: 581fd607760d18a40a8943b7b8b68e44
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/MenuJogoNovo.unity
     guid: 5dd65a10a9394cb4aaa8492e515799ae
   - enabled: 1
     path: Assets/Scenes/MenuStart.unity
     guid: 4c5b849cb6d828243b6aab9ecbb12f6f
-  - enabled: 0
-    path: Assets/Scenes/PressStartToJoinz.unity
-    guid: 340ccbb84507eca49803bbec268f3a98
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: cfcd8f33156b7d54786e09f3f0a96c28
-  - enabled: 0
-    path: Assets/Scenes/scene01.unity
-    guid: a4acf6a5b084a1e4b863a6ba73812b0f
   m_configObjects: {}
