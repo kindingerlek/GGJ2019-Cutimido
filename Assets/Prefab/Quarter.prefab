@@ -36,21 +36,6 @@ Transform:
   - {fileID: 5933674384403274095}
   - {fileID: 492781080802976346}
   - {fileID: 8280908348831663189}
-  - {fileID: 737661757458376435}
-  - {fileID: 2559815781507781316}
-  - {fileID: 6255184101240600162}
-  - {fileID: 6084024511595077838}
-  - {fileID: 1818933967756466711}
-  - {fileID: 7645740991388366987}
-  - {fileID: 7389121216084796294}
-  - {fileID: 5050128148146727704}
-  - {fileID: 5444145658159715711}
-  - {fileID: 7319315623590906492}
-  - {fileID: 3308394526890572638}
-  - {fileID: 7241932006830377718}
-  - {fileID: 2570367329300385133}
-  - {fileID: 7457346159141256715}
-  - {fileID: 7017342506099066506}
   - {fileID: 6095207601974835711}
   - {fileID: 2406219179848605369}
   - {fileID: 6549239032435009289}
@@ -225,6 +210,7 @@ Transform:
   - {fileID: 3185654152421679612}
   - {fileID: 4736688182079064388}
   - {fileID: 7154932634971053910}
+  - {fileID: 8011452659550979895}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -278,6 +264,51 @@ Transform:
   - {fileID: 7627331313558905382}
   m_Father: {fileID: 16259858198495713}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8784506021286611272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8011452659550979895}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8011452659550979895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8784506021286611272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 737661757458376435}
+  - {fileID: 2559815781507781316}
+  - {fileID: 6255184101240600162}
+  - {fileID: 6084024511595077838}
+  - {fileID: 1818933967756466711}
+  - {fileID: 7645740991388366987}
+  - {fileID: 7389121216084796294}
+  - {fileID: 5050128148146727704}
+  - {fileID: 5444145658159715711}
+  - {fileID: 7319315623590906492}
+  - {fileID: 3308394526890572638}
+  - {fileID: 7241932006830377718}
+  - {fileID: 2570367329300385133}
+  - {fileID: 7457346159141256715}
+  - {fileID: 7017342506099066506}
+  m_Father: {fileID: 16259858198495713}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &14698622319977528
 PrefabInstance:
@@ -566,6 +597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building6_1
       objectReference: {fileID: 0}
+    - target: {fileID: 1551412308775940, guid: b4f52411b7fba524e92d4e0980b4def7, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4732258636599260, guid: b4f52411b7fba524e92d4e0980b4def7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -35
@@ -692,6 +727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1126965167425082, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8
@@ -722,7 +761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1015,6 +1054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1126965167425082, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32
@@ -1269,7 +1312,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -1305,7 +1348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1408,6 +1451,10 @@ PrefabInstance:
     - target: {fileID: 1158419832748664, guid: 14675014a27385848847d2f666986763, type: 3}
       propertyPath: m_Name
       value: Building12_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158419832748664, guid: 14675014a27385848847d2f666986763, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4185070710197956, guid: 14675014a27385848847d2f666986763, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1542,6 +1589,10 @@ PrefabInstance:
     - target: {fileID: 1158419832748664, guid: 14675014a27385848847d2f666986763, type: 3}
       propertyPath: m_Name
       value: Building12_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158419832748664, guid: 14675014a27385848847d2f666986763, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4185070710197956, guid: 14675014a27385848847d2f666986763, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1811,6 +1862,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1126965167425082, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -1841,7 +1896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1999,6 +2054,10 @@ PrefabInstance:
     - target: {fileID: 1655870823058396, guid: 8c2c1545fa43bd543a5a9d79accd810e, type: 3}
       propertyPath: m_Name
       value: Building5_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655870823058396, guid: 8c2c1545fa43bd543a5a9d79accd810e, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4766555428877156, guid: 8c2c1545fa43bd543a5a9d79accd810e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2260,6 +2319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush2
       objectReference: {fileID: 0}
+    - target: {fileID: 1519044426502578, guid: 64436dfb7760fcd4b863f1e87f1c89fc, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4871719381636842, guid: 64436dfb7760fcd4b863f1e87f1c89fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -2322,6 +2385,10 @@ PrefabInstance:
     - target: {fileID: 1091388432922550, guid: 873b96e1543d8fd4d8217ad8cb2a69c5, type: 3}
       propertyPath: m_Name
       value: Building12_4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091388432922550, guid: 873b96e1543d8fd4d8217ad8cb2a69c5, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4708557148499476, guid: 873b96e1543d8fd4d8217ad8cb2a69c5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2386,6 +2453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building7_1
       objectReference: {fileID: 0}
+    - target: {fileID: 1336273190063086, guid: c22308bc7883a0c48b06e78d31dbc7ef, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4129231422444280, guid: c22308bc7883a0c48b06e78d31dbc7ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -2448,6 +2519,10 @@ PrefabInstance:
     - target: {fileID: 1840113873042854, guid: 92da00bc28c06e24d88859c4a68da80f, type: 3}
       propertyPath: m_Name
       value: Tree15 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840113873042854, guid: 92da00bc28c06e24d88859c4a68da80f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4339282096450916, guid: 92da00bc28c06e24d88859c4a68da80f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2703,7 +2778,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -2739,7 +2814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2977,6 +3052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building6_3
       objectReference: {fileID: 0}
+    - target: {fileID: 1070773838117758, guid: d15d1cb7102f6754b8c4de214e3ddf05, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4384195833741104, guid: d15d1cb7102f6754b8c4de214e3ddf05, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -3165,6 +3244,10 @@ PrefabInstance:
     - target: {fileID: 1429129998258924, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
       propertyPath: m_Name
       value: Building12_3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1429129998258924, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4199851476574930, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3568,6 +3651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench
       objectReference: {fileID: 0}
+    - target: {fileID: 1126965167425082, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8
@@ -3598,7 +3685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3688,7 +3775,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -3724,7 +3811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3759,7 +3846,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -3795,7 +3882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3827,6 +3914,10 @@ PrefabInstance:
     - target: {fileID: 1387837248935482, guid: dd92f72c2ab704e41952bb625704553b, type: 3}
       propertyPath: m_Name
       value: Building12_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1387837248935482, guid: dd92f72c2ab704e41952bb625704553b, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4365410852296718, guid: dd92f72c2ab704e41952bb625704553b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4016,6 +4107,10 @@ PrefabInstance:
     - target: {fileID: 1387837248935482, guid: dd92f72c2ab704e41952bb625704553b, type: 3}
       propertyPath: m_Name
       value: Building12_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1387837248935482, guid: dd92f72c2ab704e41952bb625704553b, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4365410852296718, guid: dd92f72c2ab704e41952bb625704553b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4208,7 +4303,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -4244,7 +4339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4284,6 +4379,10 @@ PrefabInstance:
     - target: {fileID: 1158419832748664, guid: 14675014a27385848847d2f666986763, type: 3}
       propertyPath: m_Name
       value: Building12_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158419832748664, guid: 14675014a27385848847d2f666986763, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4185070710197956, guid: 14675014a27385848847d2f666986763, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4544,6 +4643,10 @@ PrefabInstance:
     - target: {fileID: 1579866801272470, guid: 0f8a28aeffc186b4bbc58be4a8a20bda, type: 3}
       propertyPath: m_Name
       value: Building6_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579866801272470, guid: 0f8a28aeffc186b4bbc58be4a8a20bda, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4818808207866002, guid: 0f8a28aeffc186b4bbc58be4a8a20bda, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5325,6 +5428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building12_4
       objectReference: {fileID: 0}
+    - target: {fileID: 1091388432922550, guid: 873b96e1543d8fd4d8217ad8cb2a69c5, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4708557148499476, guid: 873b96e1543d8fd4d8217ad8cb2a69c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32
@@ -5571,7 +5678,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -5607,7 +5714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5710,6 +5817,10 @@ PrefabInstance:
     - target: {fileID: 1840113873042854, guid: 92da00bc28c06e24d88859c4a68da80f, type: 3}
       propertyPath: m_Name
       value: Tree15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840113873042854, guid: 92da00bc28c06e24d88859c4a68da80f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4339282096450916, guid: 92da00bc28c06e24d88859c4a68da80f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5908,6 +6019,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building12_4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1091388432922550, guid: 873b96e1543d8fd4d8217ad8cb2a69c5, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4708557148499476, guid: 873b96e1543d8fd4d8217ad8cb2a69c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -6099,7 +6214,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -6135,7 +6250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6791,6 +6906,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building12_4
       objectReference: {fileID: 0}
+    - target: {fileID: 1091388432922550, guid: 873b96e1543d8fd4d8217ad8cb2a69c5, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4708557148499476, guid: 873b96e1543d8fd4d8217ad8cb2a69c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -7043,6 +7162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1126965167425082, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38
@@ -7179,7 +7302,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -7215,7 +7338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7256,6 +7379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush3
       objectReference: {fileID: 0}
+    - target: {fileID: 1366033297283134, guid: 953704d637a9d0c4dadf1dabc24c65d9, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4830395329115760, guid: 953704d637a9d0c4dadf1dabc24c65d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -35
@@ -7286,7 +7413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4830395329115760, guid: 953704d637a9d0c4dadf1dabc24c65d9, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4830395329115760, guid: 953704d637a9d0c4dadf1dabc24c65d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7455,7 +7582,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -7491,7 +7618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7721,6 +7848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1126965167425082, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -7751,7 +7882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7854,6 +7985,10 @@ PrefabInstance:
     - target: {fileID: 1429129998258924, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
       propertyPath: m_Name
       value: Building12_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1429129998258924, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4199851476574930, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8123,6 +8258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building12_3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1429129998258924, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4199851476574930, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22
@@ -8320,6 +8459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1366033297283134, guid: 953704d637a9d0c4dadf1dabc24c65d9, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4830395329115760, guid: 953704d637a9d0c4dadf1dabc24c65d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -35
@@ -8350,7 +8493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4830395329115760, guid: 953704d637a9d0c4dadf1dabc24c65d9, type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4830395329115760, guid: 953704d637a9d0c4dadf1dabc24c65d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8390,6 +8533,10 @@ PrefabInstance:
     - target: {fileID: 1429129998258924, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
       propertyPath: m_Name
       value: Building12_3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1429129998258924, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4199851476574930, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8519,7 +8666,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -8555,7 +8702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8661,7 +8808,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -8697,7 +8844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8800,6 +8947,10 @@ PrefabInstance:
     - target: {fileID: 1429129998258924, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
       propertyPath: m_Name
       value: Building12_3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1429129998258924, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4199851476574930, guid: d8473cb61d96c1643a54eb32f7084fe2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8921,7 +9072,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -8957,7 +9108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9055,7 +9206,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -9091,7 +9242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9126,7 +9277,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -9162,7 +9313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9266,6 +9417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building12_4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1091388432922550, guid: 873b96e1543d8fd4d8217ad8cb2a69c5, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4708557148499476, guid: 873b96e1543d8fd4d8217ad8cb2a69c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22
@@ -9323,7 +9478,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4736688182079064388}
+    m_TransformParent: {fileID: 8011452659550979895}
     m_Modifications:
     - target: {fileID: 1425454321737962, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_Name
@@ -9359,7 +9514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4030589515560760, guid: 0771438157c7adf4ca0fce123bb438ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9715,6 +9870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree13
       objectReference: {fileID: 0}
+    - target: {fileID: 1858082638205680, guid: 84565faa71097c846aa4c357d576fd9b, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4483672407700218, guid: 84565faa71097c846aa4c357d576fd9b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -9841,6 +10000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree15 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1840113873042854, guid: 92da00bc28c06e24d88859c4a68da80f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4339282096450916, guid: 92da00bc28c06e24d88859c4a68da80f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
@@ -9966,6 +10129,10 @@ PrefabInstance:
     - target: {fileID: 1126965167425082, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_Name
       value: Bench (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126965167425082, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10163,6 +10330,10 @@ PrefabInstance:
     - target: {fileID: 1387837248935482, guid: dd92f72c2ab704e41952bb625704553b, type: 3}
       propertyPath: m_Name
       value: Building12_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1387837248935482, guid: dd92f72c2ab704e41952bb625704553b, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4365410852296718, guid: dd92f72c2ab704e41952bb625704553b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10423,6 +10594,10 @@ PrefabInstance:
     - target: {fileID: 1126965167425082, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_Name
       value: Bench (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126965167425082, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4686998387756112, guid: fa157eff86da7cc47a891efc6b1918d3, type: 3}
       propertyPath: m_LocalPosition.x

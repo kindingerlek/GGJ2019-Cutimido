@@ -17,18 +17,23 @@ public class Splitscreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        UpdateRefs();
+    }
+
+    void UpdateRefs()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            this.cameras[i].GetComponent<CameraControl>().SetObjectToFollow(players[i].transform);
+            this.players[i].GetComponent<PlayerGame>().camera = this.cameras[i];
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        CameraControl cam0;
-            CameraControl cam1;
-            CameraControl cam2;
-            CameraControl cam3;
-
-        ;
+        UpdateRefs();
+        
         int playerCount = 0;
         foreach(GameObject player in players){
             PlayerGame player2 = player.GetComponent(typeof(PlayerGame)) as PlayerGame;
@@ -48,39 +53,18 @@ public class Splitscreen : MonoBehaviour
         switch (playerCount) {
            default:
             case 1:
-                 cam0 = this.cameras[0].GetComponent(typeof(CameraControl)) as CameraControl;
-                cam0.SetObjectToFollow(playersToFit[0].transform);
 
                 this.cameras[0].rect = new Rect(0, 0, 1, 1);
                 this.cameras[0].enabled = true;
                 break;
-            case 2:
-
-                 cam0 = this.cameras[0].GetComponent(typeof(CameraControl)) as CameraControl;
-                cam0.SetObjectToFollow(playersToFit[0].transform);
-
-                 cam1 = this.cameras[1].GetComponent(typeof(CameraControl)) as CameraControl;
-                cam1.SetObjectToFollow(playersToFit[1].transform);
-
+            case 2:                
                 this.cameras[0].rect = new Rect(0, 0, 0.5f, 1);
                 this.cameras[1].rect = new Rect(0.5f, 0, 0.5f, 1);
 
                 this.cameras[0].enabled = true;
                 this.cameras[1].enabled = true;
                 break;
-            case 3:
-
-
-                 cam0 = this.cameras[0].GetComponent(typeof(CameraControl)) as CameraControl;
-                cam0.SetObjectToFollow(playersToFit[0].transform);
-
-                 cam1 = this.cameras[1].GetComponent(typeof(CameraControl)) as CameraControl;
-                cam1.SetObjectToFollow(playersToFit[1].transform);
-
-                 cam2 = this.cameras[2].GetComponent(typeof(CameraControl)) as CameraControl;
-                cam2.SetObjectToFollow(playersToFit[2].transform);
-
-                
+            case 3:                
                 this.cameras[0].rect = new Rect(0.25f, 0, 0.5f, 0.5f);
                 this.cameras[1].rect = new Rect(0, 0.5f, 0.5f, 0.5f);
                 this.cameras[2].rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
@@ -90,18 +74,6 @@ public class Splitscreen : MonoBehaviour
                 this.cameras[2].enabled = true;
                 break;
             case 4:
-
-                 cam0 = this.cameras[0].GetComponent(typeof(CameraControl)) as CameraControl;
-                cam0.SetObjectToFollow(playersToFit[0].transform);
-
-                 cam1 = this.cameras[1].GetComponent(typeof(CameraControl)) as CameraControl;
-                cam1.SetObjectToFollow(playersToFit[1].transform);
-
-                 cam2 = this.cameras[2].GetComponent(typeof(CameraControl)) as CameraControl;
-                cam2.SetObjectToFollow(playersToFit[2].transform);
-
-                 cam3 = this.cameras[3].GetComponent(typeof(CameraControl)) as CameraControl;
-                cam3.SetObjectToFollow(playersToFit[3].transform);
 
                 this.cameras[0].rect = new Rect(0, 0, 0.5f, 0.5f);
                 this.cameras[1].rect = new Rect(0.5f, 0, 0.5f, 0.5f);

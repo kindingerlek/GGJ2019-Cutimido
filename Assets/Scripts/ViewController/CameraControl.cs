@@ -19,14 +19,15 @@ public class CameraControl : MonoBehaviour
     {
         // Keep a note of the time the movement started.
         startTime = Time.time;
-        if (!objectToFollow)
-            Debug.LogError("Coloca o player seu dev safado.");
 
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
+        if (!objectToFollow)
+            return;
+
         journeyLength = Vector3.Distance(this.transform.position, objectToFollow.position + offset);
         // Distance moved = time * speed.
         float distCovered = (Time.time - startTime) * speed;
