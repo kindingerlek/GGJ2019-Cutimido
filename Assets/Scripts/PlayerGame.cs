@@ -10,25 +10,38 @@ public class PlayerGame : MonoBehaviour {
     public int gamePlayerId = 0;
 
     public float turnSpeed = 3;
-    public float speed = 10.0f;
-    public float gravity = 10.0f;
-    public float maxVelocityChange = 10.0f;
+    public float speed = 8;
+    public float gravity = 20.0f;
+    public float maxVelocityChange = 0.45f;
     public float jumpHeight = 2.0f;
     public float currentRotationSpeed = 3;
+
+    public float slowSpeed = 2.65f;
+    public float slowVelocityChange = 0.15f;
+
     public bool canJump = true;
 
     private bool fire;
     private bool jump;
     private bool grounded = false;
 
+    private float currentSpeed;
+    private float currentVelocityChange;
+
+    private float remainSlowTime;
     private Vector3 moveVector;
     private Vector3 lookDirection;
 
     private Vector3 lastMoveVector = Vector3.zero;
-
+    private Animator animator;
     private new Rigidbody rigidbody;
-    private Rewired.Player player { get { return PressStartToJoinExample_Assigner.GetRewiredPlayer(gamePlayerId); } }
 
+    [HideInInspector]
+    public Camera camera;
+
+    public Rewired.Player player { get { return PressStartToJoinExample_Assigner.GetRewiredPlayer(gamePlayerId); } }
+
+  
 
     void Awake()
     {
@@ -36,6 +49,11 @@ public class PlayerGame : MonoBehaviour {
 
         rigidbody.freezeRotation = true;
         rigidbody.useGravity = false;
+
+        currentSpeed = speed;
+        currentVelocityChange = maxVelocityChange;
+
+        animator = this.GetComponentInChildren<Animator>();
     }
 
     private void GetInput()
@@ -50,10 +68,27 @@ public class PlayerGame : MonoBehaviour {
         // Get the input from the Rewired Player. All controllers that the Player owns will contribute, so it doesn't matter
         // whether the input is coming from a joystick, the keyboard, mouse, or a custom controller.
 
-        moveVector.x = player.GetAxis("Move Horizontal"); // get input by name or action id
-        moveVector.z = player.GetAxis("Move Vertical");
+        Vector3 direction =
+            player.GetAxis("Move Vertical") * camera.transform.forward +
+            player.GetAxis("Move Horizontal") * camera.transform.right;
+
+        direction.y = 0f;
+
+        moveVector = direction;
+
         fire = player.GetButtonDown("Fire");
         jump = player.GetButtonDown("Jump");
+    }
+
+    private Vector2 JoystickRelativeToCamera(Vector2 axis, Camera cam)
+    {
+        Vector3 direction =
+            axis.y * cam.transform.forward +
+            axis.x * cam.transform.right;
+
+        direction.y = 0f;
+
+        return direction;
     }
 
     void Update()
@@ -62,12 +97,24 @@ public class PlayerGame : MonoBehaviour {
         if (player == null) return;
 
         GetInput();
+
+        if((remainSlowTime -= Time.deltaTime) > 0)
+        {
+            currentSpeed = slowSpeed;
+            currentVelocityChange = slowVelocityChange;
+        }
+        else
+        {
+            currentSpeed = speed;
+            currentVelocityChange = maxVelocityChange;
+        }
+
     }
 
     void FixedUpdate()
     {
         
-        if (grounded)
+        if (player != null && grounded)
         {
             // Calculate how fast we should be moving
 
@@ -99,7 +146,7 @@ public class PlayerGame : MonoBehaviour {
             Vector3 smoothedLookDirection = Vector3.Slerp(transform.forward, lookDirection, 1 - Mathf.Exp(-currentRotationSpeed * Time.deltaTime)).normalized;
 
             // Set the current rotation (which will be used by the KinematicCharacterMotor)
-            transform.rotation = Quaternion.LookRotation(smoothedLookDirection, transform.up);
+            transform.rotation = Quaternion.LookRotation(smoothedLookDirection, Vector3.up);
         }
 
         // We apply gravity manually for more tuning control
@@ -107,6 +154,18 @@ public class PlayerGame : MonoBehaviour {
 
         grounded = false;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!collision.transform.tag.Equals("Obstacle"))
+            return;
+
+        remainSlowTime = 5f;
+
+        animator.SetTrigger("hit");
+        
+    }
+
 
     void OnCollisionStay()
     {

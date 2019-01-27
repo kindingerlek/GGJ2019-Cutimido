@@ -19,22 +19,27 @@ public class CameraControl : MonoBehaviour
     {
         // Keep a note of the time the movement started.
         startTime = Time.time;
-        if (!objectToFollow)
-            Debug.LogError("Coloca o player seu dev safado.");
 
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
+        if (!objectToFollow)
+            return;
+
         journeyLength = Vector3.Distance(this.transform.position, objectToFollow.position + offset);
         // Distance moved = time * speed.
         float distCovered = (Time.time - startTime) * speed;
         // Fraction of journey completed = current distance divided by total distance.
         float fracJourney = distCovered / journeyLength;
 
-        print(fracJourney);
+       // print(fracJourney);
 
         this.transform.position = Vector3.Lerp(this.transform.position, new Vector3(objectToFollow.position.x + offset.x,transform.position.y,objectToFollow.position.z + offset.z) , speed * Time.deltaTime);
+    }
+
+    public void SetObjectToFollow(Transform obj) {
+        objectToFollow = obj;
     }
 }
