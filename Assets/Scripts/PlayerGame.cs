@@ -36,7 +36,7 @@ public class PlayerGame : MonoBehaviour {
     private Animator animator;
     private new Rigidbody rigidbody;
     public AudioClip fart;
-
+    public ParticleSystem[] particles;
     [HideInInspector]
     public Camera camera;
 
@@ -125,8 +125,10 @@ public class PlayerGame : MonoBehaviour {
     }
 
     void diarreia() {
+        foreach (ParticleSystem par in particles) {
+            par.Play();
+        }
         source.PlayOneShot(fart);
-
 
     }
     void FixedUpdate()
