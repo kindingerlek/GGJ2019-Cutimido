@@ -12,15 +12,10 @@ public class Credits: MonoBehaviour
     public void LoadCredits() {
         if (status == (int)EnumCredits.Designer)
         {
-            Cs.LoadScene(7);
+            Cs.LoadScene(2);
             return;
         }
         else if (status == (int) EnumCredits.Artist)
-        {
-            Cs.LoadScene(1);
-            return;
-        }
-        else if (status == (int)EnumCredits.Programmer)
         {
             Cs.LoadScene(3);
             return;
@@ -31,7 +26,7 @@ public class Credits: MonoBehaviour
         }
         else if (status == 5)
         {
-            Cs.LoadScene(2);
+            Cs.LoadScene(4);
             return;
         }
 
