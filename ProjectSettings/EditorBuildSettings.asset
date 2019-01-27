@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MenuJogoNovo.unity
     guid: 5dd65a10a9394cb4aaa8492e515799ae
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MenuStart.unity
     guid: 4c5b849cb6d828243b6aab9ecbb12f6f
   - enabled: 0

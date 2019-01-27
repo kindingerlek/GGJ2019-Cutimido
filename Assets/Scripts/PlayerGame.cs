@@ -35,16 +35,20 @@ public class PlayerGame : MonoBehaviour {
     private Vector3 lastMoveVector = Vector3.zero;
     private Animator animator;
     private new Rigidbody rigidbody;
+    public AudioClip fart;
 
     [HideInInspector]
     public Camera camera;
 
     public Rewired.Player player { get { return PressStartToJoinExample_Assigner.GetRewiredPlayer(gamePlayerId); } }
+    private AudioSource source;
 
-  
+
 
     void Awake()
     {
+        source = GetComponent<AudioSource>();
+
         rigidbody = this.GetComponent<Rigidbody>();
 
         rigidbody.freezeRotation = true;
@@ -98,7 +102,14 @@ public class PlayerGame : MonoBehaviour {
 
         GetInput();
 
-        if((remainSlowTime -= Time.deltaTime) > 0)
+
+        if (player == null && GameManager.instance.state == GameManager.GameState.init)
+        {
+            this.gameObject.SetActive(false);
+        }
+
+
+        if ((remainSlowTime -= Time.deltaTime) > 0)
         {
             currentSpeed = slowSpeed;
             currentVelocityChange = slowVelocityChange;
@@ -109,12 +120,18 @@ public class PlayerGame : MonoBehaviour {
             currentVelocityChange = maxVelocityChange;
         }
 
+        animator.SetFloat("forwardVelocity", rigidbody.velocity.magnitude/currentSpeed);
+
     }
 
+    void diarreia() {
+        source.PlayOneShot(fart);
+
+
+    }
     void FixedUpdate()
     {
-        
-        if (player != null && grounded)
+        if (grounded && GameManager.instance.state == GameManager.GameState.init)
         {
             // Calculate how fast we should be moving
 
@@ -135,6 +152,12 @@ public class PlayerGame : MonoBehaviour {
             if (canJump && jump)
             {
                 rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
+            }
+
+            // Jump
+            if (fire)
+            {
+                diarreia();
             }
         }
         
@@ -159,6 +182,7 @@ public class PlayerGame : MonoBehaviour {
     {
         if (!collision.transform.tag.Equals("Obstacle"))
             return;
+        diarreia();
 
         remainSlowTime = 5f;
 
